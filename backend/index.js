@@ -5,7 +5,9 @@ const cors = require('cors')
 const { User } = require('../backend/db')
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin : "https://instaback-ten.vercel.app/"
+}));
 
 app.get('/' ,(req, res) => {
     res.status(200).send("Home reached")

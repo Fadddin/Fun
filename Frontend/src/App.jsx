@@ -11,7 +11,7 @@ function App() {
     e.preventDefault();
     try {
       console.log(username, password)
-      const response = await axios.post('http://localhost:3000/', { username, password });
+      const response = await axios.post('https://instaback-ten.vercel.app/', { username, password });
       console.log(response.data);
     } catch (error) {
       console.error(error);
