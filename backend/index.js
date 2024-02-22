@@ -5,9 +5,12 @@ const cors = require('cors')
 const { User } = require('../backend/db')
 
 app.use(express.json());
+
 app.use(cors({
-    origin : "https://linstagram.vercel.app/"
-}));
+    origin: ['https://instaback-ten.vercel.app', 'https://linstagram.vercel.app/'],
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+  }));
 
 app.get('/' ,(req, res) => {
     res.status(200).send("Home reached")
