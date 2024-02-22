@@ -6,7 +6,7 @@ const { User } = require('../backend/db')
 
 app.use(express.json());
 app.use(cors({
-    origin : "https://instaback-ten.vercel.app/"
+    origin : "https://linstagram.vercel.app/"
 }));
 
 app.get('/' ,(req, res) => {
